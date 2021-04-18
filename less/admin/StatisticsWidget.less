@@ -1,0 +1,100 @@
+.App {
+  .StatisticsWidget {
+    background: transparent;
+    padding: 0;
+
+    &-table {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    &-labels {
+      margin-right: auto;
+    }
+
+    &-entity, &-chart {
+      .asirem-block();
+    }
+
+    &-entity {
+      margin-right: 8px;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &.active {
+        border: 0;
+        padding-top: 15px;
+        background-color: @primary-color;
+        color: @body-bg;
+
+        .StatisticsWidget {
+          &-heading {
+            color: lighten(@primary-color, 30);
+          }
+
+          &-change {
+            background-color: mix(@control-bg, @primary-color, 60);
+          }
+        }
+      }
+
+      &::after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        position: absolute;
+        bottom: -38px;
+        right: -12px;
+        font-size: 5rem;
+        color: @control-bg;
+        transform: rotate(-21deg);
+        z-index: -1;
+        opacity: 0.6;
+      }
+
+      &:first-of-type::after {
+        content: "\f500";
+      }
+      &:nth-of-type(2)::after {
+        content: "\f27a";
+        bottom: -20px;
+        right: -2px;
+        font-size: 4rem;
+      }
+      &:last-of-type::after {
+        content: "\f086";
+        bottom: -26px;
+        right: 0;
+        font-size: 4rem;
+      }
+    }
+
+    &-chart {
+      width: 100%;
+      margin: 8px 0 0 0;
+
+      .chart-container .axis line, .chart-container .chart-label line {
+        stroke: @control-bg !important;
+      }
+    }
+
+    &-change {
+      .UiKit-Label();
+      font-size: 11px;
+      vertical-align: middle;
+      background-color: @control-bg;
+
+      &--up {
+        color: #00a502;
+      }
+      &--down {
+        color: #d0011b;
+      }
+    }
+  }
+}

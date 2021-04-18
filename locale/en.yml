@@ -1,0 +1,6 @@
+sycho-asirem:
+  admin:
+    extensions: Extensions
+
+    header:
+      go_back: Back to forum

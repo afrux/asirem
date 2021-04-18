@@ -1,0 +1,28 @@
+.Group {
+  padding: 15px 15px 10px;
+  width: unset;
+  min-width: 90px;
+  margin-right: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &--add {
+    margin: 0;
+  }
+
+  &--add &-icon {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  &-icon {
+    .asirem-icon-block(60px);
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.44), transparent);
+  }
+
+  &-icon .icon, & &-icon {
+    font-size: 18px;
+  }
+}

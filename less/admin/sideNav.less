@@ -1,0 +1,35 @@
+.sideNavOffset {
+  background-color: @control-bg;
+
+  .Button:not(.Button--primary):not([disabled]):not(.Button--dashed) {
+    .Button--color(@control-color, @body-bg);
+  }
+}
+
+@media @desktop-up {
+  .sideNav {
+    margin-right: 0;
+    height: 100vh;
+
+    /*&::-webkit-scrollbar {
+        width: 8px;
+    }
+    & {
+        scrollbar-width: thin;
+        scrollbar-color: @control-color @control-color;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: @control-color;
+        border-radius: 6px;
+    }*/
+  }
+
+  .sideNavOffset {
+    position: relative;
+    padding-left: 1rem;
+    z-index: 0;
+  }
+}

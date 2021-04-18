@@ -1,0 +1,35 @@
+.StatusWidget {
+  padding: 0;
+  background-color: transparent;
+
+  > ul {
+    display: flex;
+
+    > li {
+      padding: 8px;
+      background-color: @body-bg;
+      margin-right: 8px;
+      max-width: unset !important;
+      border-radius: @border-radius;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.Asirem-StatusWidget {
+  &-icon {
+    .asirem-icon-block(45px);
+    font-size: 20px;
+    margin-right: 12px;
+  }
+
+  &-value {
+    font-weight: 600;
+  }
+}

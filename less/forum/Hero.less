@@ -1,0 +1,33 @@
+.Hero {
+  // background: @control-bg !important;
+  // color: @control-color !important;
+  // text-align: start;
+  position: relative;
+  z-index: 0;
+
+  .containerNarrow {
+    max-width: unset;
+  }
+
+  + .container {
+    margin-top: 30px;
+    position: relative;
+  }
+}
+
+.Asirem-forumWaves {
+  position: absolute;
+  left: 50%;
+  bottom: -27px;
+  fill: @body-bg;
+  background: inherit;
+  backface-visibility: hidden;
+  z-index: -1;
+  height: 46px;
+  transform: translateX(-50%) rotate(-1.15deg);
+  display: flex;
+
+  path {
+    transform: scaleY(0.15);
+  }
+}

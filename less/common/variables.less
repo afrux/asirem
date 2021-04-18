@@ -1,0 +1,23 @@
+@border-radius: 14px;
+
+.define-asirem-colors(@config-dark-mode);
+.define-asirem-colors(false) {
+  @primary-bg:        lighten(@primary-color, 40);
+  @control-bg-light:  lighten(@control-bg, 3);
+}
+.define-asirem-colors(true) {
+  @primary-bg:        mix(@body-bg, @primary-color, 90);
+  @control-bg-light:  darken(@control-bg, 5);
+}
+
+.define-asirem-header(@config-colored-header);
+.define-asirem-header(false) {
+  @admin-nav-bg:      @body-bg;
+  @admin-nav-color:   @control-color;
+}
+.define-asirem-header(true) {
+  @admin-nav-bg:      @body-bg;
+  @admin-nav-color:   @control-color;
+}
+
+@asirem-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;

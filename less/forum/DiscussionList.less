@@ -1,0 +1,132 @@
+@media @desktop-up {
+  .DiscussionList {
+    /*padding: 5px;
+    background-color: @control-bg-light;
+    border-radius: @border-radius;*/
+
+    &Item {
+      margin: 0 0 5px 0;
+      padding: 5px;
+      background-color: @control-bg;
+
+      &:hover, &:focus {
+        // background-color: @body-bg;
+      }
+
+      &-content.read &-title {
+        color: @text-color !important;
+      }
+
+      &-content.unread &-title {
+        font-weight: unset !important;
+      }
+
+      &-info {
+        > :not(:first-child) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .TagsLabel .TagLabel:not(.overspecifying__) {
+    border-radius: @border-radius;
+    margin-right: 5px;
+  }
+
+  .App {
+    .IndexPage .DiscussionListItem,
+    .UserPage .DiscussionListItem {
+      &-info {
+        > .item-tags {
+          position: relative;
+          right: 0;
+          top: 0;
+          display: block;
+          width: 100%;
+          max-width: unset;
+          margin: 4px 0 0 0;
+          -webkit-mask-image: unset;
+          mask-image: unset;
+        }
+      }
+    }
+
+    .DiscussionListItem {
+      &-info {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      &-main {
+        padding: 0;
+      }
+
+      &-badges {
+        margin: 0;
+        width: auto;
+        float: none;
+        position: absolute;
+        right: 68px;
+        top: 10px;
+        display: block;
+
+        .Badge {
+          margin: 0 2px;
+          box-shadow: none;
+          border-radius: 14px;
+        }
+      }
+
+      &-author {
+        float: none;
+        margin: 0;
+        display: block;
+
+        &-container {
+          align-self: flex-start;
+        }
+
+        &-container {
+          margin-right: 15px;
+        }
+
+        .Avatar {
+          .asirem-icon-block(42px);
+          border-radius: 100%;
+        }
+      }
+
+      &-main {
+        margin: 0;
+      }
+
+      &-content {
+        display: flex;
+        align-items: center;
+        padding: 12px 25px 12px 12px;
+      }
+
+      &-count {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        float: none;
+        display: block;
+        white-space: nowrap;
+
+        &::before {
+          margin-left: 0;
+          margin-right: 7px;
+        }
+      }
+
+      &-stats {
+        align-self: flex-start;
+        margin-top: 12px;
+        margin-left: 12px;
+      }
+    }
+  }
+}

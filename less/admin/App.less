@@ -1,0 +1,128 @@
+#Asirem-adminWaves {
+  display: none;
+}
+
+@media @desktop-up {
+  .App {
+    padding-top: 0;
+  }
+  .App-header {
+    background-color: transparent;
+    padding: 30px;
+    height: unset;
+
+    > .container {
+      padding: 0;
+    }
+  }
+  .affix {
+    .App-header {
+      position: relative;
+      .box-shadow(none);
+    }
+    .App-nav {
+      position: sticky;
+      top: 0;
+      .box-shadow(none);
+      overflow: auto;
+    }
+  }
+  .App-nav {
+    background-color: @admin-nav-bg;
+  }
+  .App-content {
+    border-top: 0;
+
+    .sideNavOffset {
+      margin: 0;
+    }
+  }
+  .Asirem-Header-title {
+    margin: 0;
+    height: 90px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Overspecification is bad, but we do it because core overspecifies, forcing our hand
+  .App-nav .AdminNav-Main {
+    padding: 0 15px;
+
+    .Dropdown-menu > li {
+      margin-bottom: 3px;
+
+      &.active {
+        > a {
+          background-color: @primary-bg;
+          color: @primary-color;
+        }
+      }
+
+      &.active, &:hover {
+        > a {
+          > .icon {
+            background-color: @admin-nav-bg;
+          }
+        }
+      }
+
+      > a {
+        border-radius: 25px;
+        padding: 8px !important;
+        display: flex !important;
+        align-items: center;
+        transition: background-color 0.4s, color 0.4s;
+        color: @admin-nav-color;
+
+        > .icon {
+          .asirem-icon-block(32px);
+          font-size: 16px !important;
+          margin: 0 !important;
+          float: none;
+          transition: background-color 0.4s;
+        }
+
+        > .Button-label {
+          padding-left: 14px;;
+        }
+      }
+
+      &.item-extensions {
+        .Button-label {
+          width: calc(~"100% - 32px");
+          display: block;
+        }
+      }
+    }
+  }
+
+  #Asirem-adminWaves {
+    display: block;
+    position: absolute;
+    transform: scaleY(1) scaleX(.15) rotate(2deg);
+    top: 0;
+    left: -8.3rem;
+    z-index: -1;
+    max-height: 100%;
+    fill: @admin-nav-bg;
+  }
+
+  .Asirem-extensions-nav-current {
+    display: block;
+    font-size: 11px;
+    margin-top: -5px;
+    font-weight: 500;
+    color: @control-color;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .Navigation-back {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+}

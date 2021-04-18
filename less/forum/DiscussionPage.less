@@ -1,0 +1,25 @@
+.DiscussionPage {
+  &-discussion {
+    > .container {
+      display: grid;
+      grid-template-areas: "stream nav";
+      grid-template-columns: 1fr 150px;
+      gap: 30px;
+    }
+  }
+
+  &-nav {
+    grid-area: nav;
+    float: none;
+
+    > ul {
+      position: sticky;
+      top: ~"calc(55px + 30px)";
+      max-height: 70vh;
+    }
+  }
+  &-stream {
+    grid-area: stream;
+    margin-right: 0;
+  }
+}
