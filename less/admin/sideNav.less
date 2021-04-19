@@ -1,9 +1,22 @@
 .sideNavOffset {
   background-color: @control-bg;
 
-  .Button:not(.Button--primary):not([disabled]):not(.Button--dashed) {
+  /*.Button:not(.Button--primary):not([disabled]):not(.Button--dashed) {
     .Button--color(@control-color, @body-bg);
+  }*/
+
+  .Button {
+    --control-bg: @body-bg;
   }
+  .Button--dashed {
+    .Button--dashed();
+  }
+
+}
+
+.Button {
+  background-color: var(--control-bg);
+  color: var(--control-color);
 }
 
 @media @desktop-up {

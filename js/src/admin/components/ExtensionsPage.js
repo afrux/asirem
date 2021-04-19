@@ -1,5 +1,6 @@
 import AdminPage from "flarum/admin/components/AdminPage";
 import getCategorizedExtensions from "flarum/admin/utils/getCategorizedExtensions";
+import ExtensionsWidget from "flarum/admin/components/ExtensionsWidget";
 import icon from "flarum/common/helpers/icon";
 import isExtensionEnabled from "flarum/admin/utils/isExtensionEnabled";
 import Link from "flarum/common/components/Link";

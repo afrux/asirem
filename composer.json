@@ -36,9 +36,7 @@
       "category": "theme",
       "optional-dependencies": ["flarum/tags"],
       "icon": {
-        "name": "fas fa-arrow-up",
-        "backgroundColor": "gold",
-        "color": "#fff"
+        "image": "icon.svg"
       }
     },
     "flagrow": {

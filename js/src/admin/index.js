@@ -133,15 +133,15 @@ app.initializers.add('sycho/flarum-asirem', () => {
     });
   });
 
-  /*extend(PermissionsPage.prototype, 'content', (vnode) => {
-    vnode[0].children[0].children.map(groupNode => {
+  extend(PermissionsPage.prototype, 'content', (vnode) => {
+    /*vnode[0].children[0].children.map(groupNode => {
       if (!groupNode.children[0].attrs.group) return;
 
       groupNode.attrs.style = {"--group-color": groupNode.children[0].attrs.group.color()};
-    });
+    });*/
 
     vnode[0].children[1].attrs.className += " Button--dashed";
-  });*/
+  });
 
   extend(FlarumExtensionPage.prototype, 'oninit', ExtensionPage.prototype.oninit);
   override(FlarumExtensionPage.prototype, 'header', ExtensionPage.prototype.header);
