@@ -6,11 +6,11 @@
 
     &Item {
       margin: 0 0 5px 0;
-      padding: 5px;
+      padding: 10px 10px 2px;
       background-color: @control-bg;
 
-      &:hover, &:focus {
-        // background-color: @body-bg;
+      &-tags {
+        margin-bottom: 5px;
       }
 
       &-content.read &-title {
@@ -32,6 +32,7 @@
   .TagsLabel .TagLabel:not(.overspecifying__) {
     border-radius: @border-radius;
     margin-right: 5px;
+    font-size: 11px;
   }
 
   .App {
@@ -105,7 +106,7 @@
       &-content {
         display: flex;
         align-items: center;
-        padding: 12px 25px 12px 12px;
+        padding: 5px 0 8px;
       }
 
       &-count {

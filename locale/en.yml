@@ -4,3 +4,7 @@ sycho-asirem:
 
     header:
       go_back: Back to forum
+
+    upgrade_alert:
+      title: "Flarum {version} is now available!"
+      content: "Head on over to {discuss_link} for more details on upgrading."

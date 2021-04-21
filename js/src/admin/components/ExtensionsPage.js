@@ -9,7 +9,7 @@ export default class ExtensionsPage extends AdminPage {
   oninit(vnode) {
     super.oninit(vnode);
 
-    this.extensions = getCategorizedExtensions();
+    this.extensions = app.categorizedExtensions || getCategorizedExtensions();
   }
 
   headerInfo() {
@@ -27,7 +27,7 @@ export default class ExtensionsPage extends AdminPage {
         <div className="Asirem-ExtensionCategories-container">
           {Object.keys(this.extensions).map(category => (
             <div className="Asirem-ExtensionCategory">
-              <h3 className="Asirem-ExtensionCategory-title">{app.translator.trans(`core.admin.nav.categories.${category}`)}</h3>
+              <h3 className="Asirem-ExtensionCategory-title">{(app.categoryLabels && app.categoryLabels[category]) || app.translator.trans(`core.admin.nav.categories.${category}`)}</h3>
               <div className="Asirem-ExtensionCategory-container">
                 {this.extensions[category].map(extension => (
                   <Link href={app.route('extension', { id: extension.id })} className="Asirem-Extension">

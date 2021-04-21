@@ -32,4 +32,49 @@
   &-value {
     font-weight: 600;
   }
+
+  &-control {
+    margin-left: auto;
+    margin-right: 6px;
+    --size: 35px;
+    font-size: 18px;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.Button {
+      --control-color: @alert-info-bg;
+      --control-bg: @alert-info-color;
+    }
+  }
+}
+
+.Asirem-VersionUpdate {
+  margin-top: 20px;
+
+  .Alert {
+    padding: 15px 18px;
+    position: relative;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 3px;
+      font-size: 17px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 10px solid transparent;
+      border-bottom-color: @alert-info-bg;
+      top: -20px;
+      left: calc(~"100% / 6 - 8px");
+    }
+  }
 }

@@ -3,19 +3,21 @@ import AdminNav from 'flarum/admin/components/AdminNav';
 import AdminHeader from 'flarum/admin/components/AdminHeader';
 import classList from 'flarum/common/utils/classList';
 import icon from 'flarum/common/helpers/icon';
+import listItems from 'flarum/common/helpers/listItems';
 import SelectDropdown from 'flarum/common/components/SelectDropdown';
 import LinkButton from 'flarum/common/components/LinkButton';
 import DashboardPage from 'flarum/admin/components/DashboardPage';
 import FlarumExtensionPage from 'flarum/admin/components/ExtensionPage';
 import ExtensionsWidget from 'flarum/admin/components/ExtensionsWidget';
-
-import ExtensionsPage from './components/ExtensionsPage';
-import ExtensionPage from './components/ExtensionPage';
 import Navigation from 'flarum/common/components/Navigation';
+import Alert from 'flarum/common/components/Alert';
 import StatusWidget from 'flarum/admin/components/StatusWidget';
 import Dropdown from 'flarum/common/components/Dropdown';
 import Button from 'flarum/common/components/Button';
 import PermissionsPage from 'flarum/admin/components/PermissionsPage';
+
+import ExtensionsPage from './components/ExtensionsPage';
+import ExtensionPage from './components/ExtensionPage';
 
 app.initializers.add('sycho/flarum-asirem', () => {
   app.routes['extensions'] = { path: '/extensions', component: ExtensionsPage };
@@ -110,7 +112,10 @@ app.initializers.add('sycho/flarum-asirem', () => {
     );
   });
 
-  extend(StatusWidget.prototype, 'items', (items) => {
+  override(StatusWidget.prototype, 'content', function (original) {
+    const items = this.items();
+    const newVersionAvailable = app.data.updateAvailable;
+
     items.remove('tools');
 
     const icons = {
@@ -131,6 +136,35 @@ app.initializers.add('sycho/flarum-asirem', () => {
 
       delete item[2];
     });
+
+    if (newVersionAvailable) {
+      items.get('version-flarum').push(
+        <Button
+          className="Asirem-StatusWidget-control Button Button--icon"
+          icon="fas fa-arrow-alt-circle-up"
+          aria-expanded="true"
+        />
+      );
+    }
+
+    let content = [<ul>{listItems(items.toArray())}</ul>];
+
+    if (newVersionAvailable) {
+      content.push(
+        <div className="Asirem-VersionUpdate">
+          <Alert type="info" dismissible={false}>
+            <h3>{app.translator.trans('sycho-asirem.admin.upgrade_alert.title', {
+              version: newVersionAvailable
+            })}</h3>
+            <p>{app.translator.trans('sycho-asirem.admin.upgrade_alert.content', {
+              discuss_link: <a href="https://discuss.flarum.org/t/blog">https://discuss.flarum.org/t/blog</a>
+            })}</p>
+          </Alert>
+        </div>
+      );
+    }
+
+    return content;
   });
 
   extend(PermissionsPage.prototype, 'content', (vnode) => {

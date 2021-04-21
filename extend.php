@@ -22,9 +22,10 @@ return [
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/less/admin.less')
-        ->content(function ($document) {
+        ->content(function (Document $document) {
             $document->layoutView = "sycho-asirem::frontend.admin";
-        }),
+        })
+        ->content(CheckFlarumUpdates::class),
 
     (new Extend\View)
         ->namespace("sycho-asirem", __DIR__."/views"),

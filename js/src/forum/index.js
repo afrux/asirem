@@ -6,7 +6,8 @@ import UserCard from 'flarum/forum/components/UserCard';
 import TagHero from 'flarum/tags/components/TagHero';
 
 app.initializers.add('sycho/flarum-asirem', () => {
-  extend(DiscussionListItem.prototype, 'view', (vnode) => {
+  let tags;
+  extend(DiscussionListItem.prototype, 'view', function (vnode) {
     const discussionListItemContent = vnode.children.find(e => e.tag === 'div' && e.attrs && e.attrs.className.includes("DiscussionListItem-content"));
 
     discussionListItemContent.children[0] = (
@@ -18,16 +19,20 @@ app.initializers.add('sycho/flarum-asirem', () => {
     discussionListItemContent.children[3] = (
       <div className="DiscussionListItem-stats">{discussionListItemContent.children[3]}</div>
     );
+
+    const items = this.infoItems();
+
+    if (! tags) return;
+
+    vnode.children[2] = <div className="DiscussionListItem-tags">{tags}</div>;
+    vnode.children.push(discussionListItemContent);
   });
 
   extend(DiscussionListItem.prototype, 'infoItems', (items) => {
     if (!items.has('tags')) return;
 
-    const tags = items.get('tags');
-
+    tags = items.get('tags');
     items.remove('tags');
-
-    items.add('tags', tags, -99999);
   });
 
   [

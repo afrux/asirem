@@ -8,7 +8,8 @@
   "license": "MIT",
   "require": {
     "flarum/core": "^0.1.0-beta.16",
-    "sycho/flarum-uikit": "^0.1.0"
+    "sycho/flarum-uikit": "^0.1.0",
+    "knplabs/packagist-api": "^1.0.0"
   },
   "require-dev": {
     "flarum/testing": "^0.1.0-beta.16"
@@ -34,7 +35,7 @@
     "flarum-extension": {
       "title": "Asirem",
       "category": "theme",
-      "optional-dependencies": ["flarum/tags"],
+      "optional-dependencies": ["flarum/tags", "sycho/flarum-advanced-extension-categories"],
       "icon": {
         "image": "icon.svg"
       }

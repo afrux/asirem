@@ -129,6 +129,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 app.initializers.add('sycho/flarum-asirem', function () {
+  var tags;
   Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_forum_components_DiscussionListItem__WEBPACK_IMPORTED_MODULE_1___default.a.prototype, 'view', function (vnode) {
     var discussionListItemContent = vnode.children.find(function (e) {
       return e.tag === 'div' && e.attrs && e.attrs.className.includes("DiscussionListItem-content");
@@ -140,12 +141,17 @@ app.initializers.add('sycho/flarum-asirem', function () {
     discussionListItemContent.children[3] = m("div", {
       className: "DiscussionListItem-stats"
     }, discussionListItemContent.children[3]);
+    var items = this.infoItems();
+    if (!tags) return;
+    vnode.children[2] = m("div", {
+      className: "DiscussionListItem-tags"
+    }, tags);
+    vnode.children.push(discussionListItemContent);
   });
   Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_forum_components_DiscussionListItem__WEBPACK_IMPORTED_MODULE_1___default.a.prototype, 'infoItems', function (items) {
     if (!items.has('tags')) return;
-    var tags = items.get('tags');
+    tags = items.get('tags');
     items.remove('tags');
-    items.add('tags', tags, -99999);
   });
   [flarum_tags_components_TagHero__WEBPACK_IMPORTED_MODULE_5___default.a && flarum_tags_components_TagHero__WEBPACK_IMPORTED_MODULE_5___default.a.prototype || null, flarum_forum_components_WelcomeHero__WEBPACK_IMPORTED_MODULE_3___default.a.prototype, flarum_forum_components_DiscussionHero__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, flarum_forum_components_UserCard__WEBPACK_IMPORTED_MODULE_4___default.a.prototype].map(function (prototype) {
     if (!prototype) {
