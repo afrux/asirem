@@ -1,0 +1,60 @@
+.GroupPermissions {
+  --padding: 15px;
+  margin-top: 10px;
+
+  &-header {
+    color: @control-color;
+    background-color: @body-bg;
+    font-weight: 600;
+    margin: 0;
+    padding: var(--padding);
+  }
+
+  &-permission {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--padding);
+    background-color: @body-bg;
+    min-height: 42px;
+
+    &-label {
+      &-icon {
+        color: @control-color;
+      }
+    }
+
+    &-control {
+      margin-left: auto;
+    }
+  }
+
+  &-permissionGroup-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  &-permissionGroup-label {
+    color: @control-color;
+    background-color: @control-bg-light;
+    padding: 5px var(--padding);
+  }
+
+  .Checkbox {
+    &-display {
+      float: none;
+    }
+  }
+}
+
+
+.IconicText {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &-icon {
+    width: 22px;
+    text-align: center;
+  }
+}

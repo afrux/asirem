@@ -4,9 +4,9 @@ import DiscussionHero from 'flarum/forum/components/DiscussionHero';
 import WelcomeHero from 'flarum/forum/components/WelcomeHero';
 import UserCard from 'flarum/forum/components/UserCard';
 import TagHero from 'flarum/tags/components/TagHero';
+import TagsPage from 'flarum/tags/components/TagsPage';
 
-app.initializers.add('sycho/flarum-asirem', () => {
-  let tags;
+app.initializers.add('sycho-asirem', () => {
   extend(DiscussionListItem.prototype, 'view', function (vnode) {
     const discussionListItemContent = vnode.children.find(e => e.tag === 'div' && e.attrs && e.attrs.className.includes("DiscussionListItem-content"));
 
@@ -20,22 +20,16 @@ app.initializers.add('sycho/flarum-asirem', () => {
       <div className="DiscussionListItem-stats">{discussionListItemContent.children[3]}</div>
     );
 
-    const items = this.infoItems();
+    if (this.attrs.discussion.tags() && this.attrs.discussion.tags()[0] && this.attrs.discussion.tags()[0].color()) {
+      vnode.attrs.style = {"--tag-color": this.attrs.discussion.tags()[0].color(), ...(vnode.attrs.style || {})}
+    }
 
-    if (! tags) return;
-
-    vnode.children[2] = <div className="DiscussionListItem-tags">{tags}</div>;
-    vnode.children.push(discussionListItemContent);
+    if (this.attrs.discussion.isUnread()) {
+      vnode.attrs.className += ' DiscussionListItem--unread';
+    }
   });
 
-  extend(DiscussionListItem.prototype, 'infoItems', (items) => {
-    if (!items.has('tags')) return;
-
-    tags = items.get('tags');
-    items.remove('tags');
-  });
-
-  [
+  /*[
     (TagHero && TagHero.prototype) || null,
     WelcomeHero.prototype,
     DiscussionHero.prototype,
@@ -56,5 +50,22 @@ app.initializers.add('sycho/flarum-asirem', () => {
         </svg>
       );
     })
+  });*/
+
+  extend(WelcomeHero.prototype, 'view', function (vnode) {
+    if (!app.forum.attribute('welcomeHeroBanner')) return;
+
+    vnode.attrs.className += ' Hero--banner';
+    vnode.attrs.style = vnode.attrs.style || {};
+    vnode.attrs.style['--banner-url'] = `url("${app.forum.attribute('welcomeHeroBanner')}")`;
+
+    if (app.forum.attribute('welcomeHeroBannerPosition')) {
+      vnode.attrs.style['--banner-position'] = app.forum.attribute('welcomeHeroBannerPosition');
+    }
+  });
+
+  extend(TagsPage.prototype, 'view', function (vnode) {
+    vnode.attrs.className = vnode.attrs.className.replace('TagsPage', 'Asirem-TagsPage');
+    vnode.children[1].attrs.className += ' sideNavContainer';
   });
 });

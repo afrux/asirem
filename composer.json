@@ -35,7 +35,11 @@
     "flarum-extension": {
       "title": "Asirem",
       "category": "theme",
-      "optional-dependencies": ["flarum/tags", "sycho/flarum-advanced-extension-categories"],
+      "optional-dependencies": [
+          "flarum/tags",
+          "flarum/approval",
+          "sycho/flarum-advanced-extension-categories"
+        ],
       "icon": {
         "image": "icon.svg"
       }

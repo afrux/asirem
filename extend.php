@@ -13,6 +13,8 @@ namespace SychO\Asirem;
 
 use Flarum\Extend;
 use Flarum\Frontend\Document;
+use SychO\Asirem\Api\Controller\UploadHeroImageController;
+use SychO\Asirem\Api\Controller\DeleteHeroImageController;
 
 return [
     (new Extend\Frontend('forum'))
@@ -26,6 +28,14 @@ return [
             $document->layoutView = "sycho-asirem::frontend.admin";
         })
         ->content(CheckFlarumUpdates::class),
+
+    (new Extend\Settings)
+        ->serializeToForum('welcomeHeroBanner', 'sycho-asirem.welcome_hero_banner', AddHeroImageUrlToApi::class)
+        ->serializeToForum('welcomeHeroBannerPosition', 'sycho-asirem.welcome_hero_banner_position'),
+
+    (new Extend\Routes('api'))
+        ->post('/asirem_banner', 'sycho-asirem.banner.upload', UploadHeroImageController::class)
+        ->delete('/asirem_banner', 'sycho-asirem.banner.remove', DeleteHeroImageController::class),
 
     (new Extend\View)
         ->namespace("sycho-asirem", __DIR__."/views"),

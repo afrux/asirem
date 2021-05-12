@@ -122,6 +122,14 @@
 }
 .ExtensionPage-headerItems, .ExtensionPage-sections {
   background-color: @body-bg;
+
+  .Button {
+    --control-bg: @control-bg;
+
+    &--primary {
+      --control-bg: @primary-color;
+    }
+  }
 }
 .ExtensionPage-sections-nav {
   background-color: @control-bg-light;
@@ -174,4 +182,8 @@
   .icon {
     margin-right: 6px;
   }
+}
+
+.UploadImageButton-image {
+  width: 400px;
 }

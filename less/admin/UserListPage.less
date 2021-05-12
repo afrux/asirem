@@ -1,0 +1,99 @@
+.UserListPage-grid {
+  grid-gap: 1px 0;
+  width: -webkit-fit-content;
+  width: fit-content;
+
+  &-header,
+  // @todo rowItem
+  &-rowItem {
+    background: @body-bg;
+    padding: 10px 15px;
+    color: @control-color;
+  }
+
+  &-rowItem {
+    &[data-column-name="avatar"], &[data-column-name="profileLink"] {
+      padding: 0;
+    }
+
+    &[data-column-name="emailAddress"] {
+      padding: 0 0 0 15px;
+    }
+
+    &[data-column-name="username"] {
+      a {
+        color: @control-color;
+      }
+    }
+  }
+
+  &-header {
+    border-bottom: none;
+    color: @control-color;
+
+    &:nth-child(2) {
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+
+  &-avatar {
+    --size: 32px;
+    width: var(--size);
+    height: var(--size);
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+  }
+}
+
+.UserList {
+  &-email {
+    height: 100%;
+    align-items: center;
+
+    &[data-email-shown="false"] {
+      .UserList-emailAddress {
+        color: transparent;
+        background-color: @control-bg;
+        filter: none;
+      }
+    }
+
+    &Address {
+      transition: color .2s ease-out, background-color .2s ease-out;
+    }
+  }
+}
+
+.UserList-emailIconBtn,
+.UserList-profileLinkBtn {
+  border-radius: 0;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.UserListPage-stat {
+  padding: 15px;
+  background: @body-bg;
+  color: @control-color;
+  border-radius: 14px;
+  min-width: 15%;
+
+  &-container {
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  &-value {
+    font-size: 1.4rem;
+  }
+
+  &-key {
+    opacity: 0.7;
+  }
+}

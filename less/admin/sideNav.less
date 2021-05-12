@@ -7,6 +7,11 @@
 
   .Button {
     --control-bg: @body-bg;
+
+    &--primary {
+      --control-color: @body-bg;
+      --control-bg: @primary-color;
+    }
   }
   .Button--dashed {
     .Button--dashed();
@@ -23,21 +28,6 @@
   .sideNav {
     margin-right: 0;
     height: 100vh;
-
-    /*&::-webkit-scrollbar {
-        width: 8px;
-    }
-    & {
-        scrollbar-width: thin;
-        scrollbar-color: @control-color @control-color;
-    }
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: @control-color;
-        border-radius: 6px;
-    }*/
   }
 
   .sideNavOffset {

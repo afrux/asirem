@@ -4,14 +4,45 @@
   // text-align: start;
   position: relative;
   z-index: 0;
+  margin: 15px auto 0;
+  max-width: @screen-desktop-hd;
+  border-radius: @border-radius;
+
+  &--banner {
+    --banner-position: center;
+    background-image: var(--banner-url);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: var(--banner-position);
+    color: @text-color;
+  }
+
+  &.TagHero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(330deg, rgba(0, 0, 0, .45), transparent);
+    border-radius: @border-radius;
+    z-index: -1;
+  }
+
+  .container {
+    padding: 30px;
+  }
 
   + .container {
-    margin-top: 30px;
     position: relative;
   }
 }
 
-.Asirem-forumWaves {
+.darkenBackground {
+  border-radius: @border-radius;
+}
+
+/*.Asirem-forumWaves {
   position: absolute;
   left: 50%;
   bottom: -27px;
@@ -26,4 +57,4 @@
   path {
     transform: scaleY(0.15);
   }
-}
+}*/

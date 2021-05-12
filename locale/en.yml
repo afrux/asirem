@@ -8,3 +8,18 @@ sycho-asirem:
     upgrade_alert:
       title: "Flarum {version} is now available!"
       content: "Head on over to {discuss_link} for more details on upgrading."
+
+    users:
+      grid:
+        columns:
+          avatar:
+            title: Avatar
+
+    settings:
+      hero_banner: Welcome Hero Image
+      hero_banner_position: "Hero Image CSS Position (example: 'center top' or 'center 20%')"
+
+    permissions:
+      edit_group: Edit
+      edit_group_permissions: Permissions
+      filter_scopes: Filter Scopes

@@ -22,16 +22,17 @@
 }
 
 .Asirem-Extension {
-  --icon-size: 50px;
+  --icon-size: 48px;
   display: grid;
   grid-gap: 8px;
   grid-template-columns: 50px minmax(0, 1fr);
   align-items: center;
-  padding: 4px 18px 4px 4px;
-  border-radius: 50px;
+  padding: 6px 18px 6px 6px;
+  border-radius: @border-radius;
   // border: 2px solid transparent;
   transition: border-color 0.4s, background-color 0.4s;
   color: inherit;
+  .asirem-border-radius(~'.ExtensionIcon');
 
   &:hover {
     text-decoration: none;
@@ -42,7 +43,6 @@
 
   &-icon {
     .ExtensionIcon {
-      border-radius: 100%;
       width: var(--icon-size);
       height: var(--icon-size);
       font-size: calc(~"var(--icon-size) / 2.5");

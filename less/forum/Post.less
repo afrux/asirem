@@ -5,9 +5,23 @@
 }
 
 .PostStream-item {
-  border-bottom: none;
+  &:not(:last-child) {
+    border-bottom: none;
+  }
 }
 
 .ReplyPlaceholder {
   margin-top: 30px;
+}
+
+.EventPost {
+  background-color: transparent;
+
+  .Post-footer {
+    display: none;
+  }
+}
+
+.EventPost .Post-actions, .Post--hidden:not(.revealContent) .Post-actions {
+  margin-top: -30px;
 }

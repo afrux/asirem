@@ -52,6 +52,7 @@
 
     .Dropdown-menu > li {
       margin-bottom: 3px;
+      .asirem-border-radius(~'> a > .icon');
 
       &.active {
         > a {
@@ -125,4 +126,19 @@
     padding-right: 13px;
     padding-left: 13px;
   }
+}
+
+&::-webkit-scrollbar {
+  width: 8px;
+}
+/*& {
+  scrollbar-width: thin;
+  scrollbar-color: @control-color @control-color;
+}*/
+&::-webkit-scrollbar-track {
+  background: transparent;
+}
+&::-webkit-scrollbar-thumb {
+  background-color: @control-color;
+  border-radius: 6px;
 }
