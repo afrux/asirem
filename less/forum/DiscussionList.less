@@ -1,9 +1,5 @@
 @media @desktop-up {
   .DiscussionList {
-    /*background: @control-bg;
-    border-radius: @border-radius;
-    padding: 6px;*/
-
     &-discussions > li {
       .asirem-border-radius(~'.Avatar');
     }
@@ -159,6 +155,15 @@
         margin-top: 12px;
         margin-left: 12px;
       }*/
+    }
+  }
+}
+
+@media @tablet-up {
+  .DiscussionListItem {
+    .item-excerpt {
+      margin-right: 0;
+      width: 100%;
     }
   }
 }

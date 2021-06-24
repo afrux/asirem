@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/sycho/flarum-asirem.svg)](https://packagist.org/packages/sycho/flarum-asirem) [![Total Downloads](https://img.shields.io/packagist/dt/sycho/flarum-asirem.svg)](https://packagist.org/packages/sycho/flarum-asirem)
 
-A [Flarum](http://flarum.org) Theme.
+A [Flarum](http://flarum.org) Theme, by [Afrux](https://github.com/afrux).
 
 ![thumbnail](https://lh3.googleusercontent.com/-zZ09tkO08xI/YHwuyvXY4AI/AAAAAAAAFX4/2R4XyWiACoo7uMuXYQ8epq_W7ohmhCkBQCLcBGAsYHQ/s16000/Screenshot%2Bfrom%2B2021-04-17%2B21-49-59.png)
 

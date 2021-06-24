@@ -17,6 +17,11 @@ use SychO\Asirem\Api\Controller\UploadHeroImageController;
 use SychO\Asirem\Api\Controller\DeleteHeroImageController;
 
 return [
+    new \SychO\UiKit\Extend\Register,
+
+    new \Afrux\ThemeBase\Extend\Init('sycho-asirem'),
+    new \Afrux\ThemeBase\Extend\Footer,
+
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
         ->css(__DIR__.'/less/forum.less'),

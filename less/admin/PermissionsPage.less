@@ -112,6 +112,20 @@
       }
     }
   }
+
+  thead td:first-child, tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-image: linear-gradient(to left, rgba(0,0,0,.1), transparent 3%);
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-image: linear-gradient(to top, rgba(0,0,0,.07), transparent 13%);
+  }
 }
 
 .Asirem-PermissionsPage-scopes {

@@ -17,17 +17,13 @@ import Alert from 'flarum/common/components/Alert';
 import StatusWidget from 'flarum/admin/components/StatusWidget';
 import Dropdown from 'flarum/common/components/Dropdown';
 import Button from 'flarum/common/components/Button';
-import EditGroupModal from 'flarum/admin/components/EditGroupModal';
 import PermissionsPage from 'flarum/admin/components/PermissionsPage';
 import PermissionGrid from 'flarum/admin/components/PermissionGrid';
 import UserListPage from 'flarum/admin/components/UserListPage';
-import GroupBadge from 'flarum/common/components/GroupBadge';
-import Group from 'flarum/common/models/Group';
 
 import UploadImageButton from './components/UploadImageButton';
 import ExtensionsPage from './components/ExtensionsPage';
 import ExtensionPage from './components/ExtensionPage';
-import GroupPermissions from './components/GroupPermissions';
 
 app.initializers.add('sycho-asirem', (app) => {
   app.routes['extensions'] = { path: '/extensions', component: ExtensionsPage };
@@ -199,47 +195,7 @@ app.initializers.add('sycho-asirem', (app) => {
   });
 
   extend(PermissionsPage.prototype, 'content', function (vnode) {
-    /*vnode[0].children[0].children.map(groupNode => {
-      if (!groupNode.children[0].attrs.group) return;
-
-      groupNode.attrs.style = {"--group-color": groupNode.children[0].attrs.group.color()};
-    });*/
-
-    vnode[0].children[0].children = app.store
-      .all('groups')
-      .filter((group) => [Group.GUEST_ID, Group.MEMBER_ID].indexOf(group.id()) === -1)
-      .map((group) => (
-        <Dropdown
-            label={[
-              <GroupBadge
-                group={group}
-                className="Group-icon"
-                label={null}
-              />,
-              <span className="Group-name">{group.namePlural()}</span>
-            ]}
-            buttonClassName="Button Group"
-            // menuClassName="Dropdown-menu--right"
-          >
-            <Button
-              icon="fas fa-pencil-alt"
-              onclick={() => app.modal.show(EditGroupModal, { group })}
-            >
-                {app.translator.trans('sycho-asirem.admin.permissions.edit_group')}
-            </Button>
-            <Button
-              icon="fas fa-key"
-              onclick={() => this.permissionUI = { prespective: 'group', group }}
-            >
-                {app.translator.trans('sycho-asirem.admin.permissions.edit_group_permissions')}
-            </Button>
-          </Dropdown>
-      ));
     vnode[0].children[1].attrs.className += " Button--dashed";
-
-    vnode[1] = (
-      this.permissionUI && this.permissionUI.prespective === 'group' && <GroupPermissions group={this.permissionUI.group} />
-    ) || vnode[1];
   });
 
   extend(PermissionGrid.prototype, 'oninit', function () {
