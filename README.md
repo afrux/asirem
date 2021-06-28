@@ -1,5 +1,6 @@
 <p align=center>
 <img src="https://lh3.googleusercontent.com/-CDid7LgrH-M/YNn460wKUMI/AAAAAAAAFdY/ttAl_XT055QzWO9bEWKPbzWBPzhPUg1UwCLcBGAsYHQ/s16000/asirem.png" alt="asirem_logo">
+</p><p align=center>
 <h1>Asirem</h1>
 <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"> <a href="https://packagist.org/packages/afrux/asirem"><img alt="Latest Stable Version" src="https://img.shields.io/packagist/v/afrux/asirem.svg?style=flat-square"></a> <a href="https://packagist.org/packages/afrux/asirem"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/afrux/asirem.svg?style=flat-square"></a> <a href="https://www.buymeacoffee.com/sycho"><img alt="donate" src="https://img.shields.io/badge/donate-buy%20me%20a%20coffee-%23ffde39?style=flat-square"></a>
 
