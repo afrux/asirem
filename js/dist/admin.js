@@ -1,2 +1,262 @@
-module.exports=function(e){var t={};function n(a){if(t[a])return t[a].exports;var s=t[a]={i:a,l:!1,exports:{}};return e[a].call(s.exports,s,s.exports,n),s.l=!0,s.exports}return n.m=e,n.c=t,n.d=function(e,t,a){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:a})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var a=Object.create(null);if(n.r(a),Object.defineProperty(a,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var s in e)n.d(a,s,function(t){return e[t]}.bind(null,s));return a},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=33)}([function(e,t){e.exports=flarum.core.compat.extend},function(e,t){e.exports=flarum.core.compat["common/helpers/icon"]},function(e,t){e.exports=flarum.core.compat["common/components/Button"]},function(e,t){e.exports=flarum.core.compat["admin/components/ExtensionPage"]},function(e,t,n){"use strict";function a(){return(a=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var a in n)Object.prototype.hasOwnProperty.call(n,a)&&(e[a]=n[a])}return e}).apply(this,arguments)}n.d(t,"a",(function(){return a}))},function(e,t){e.exports=flarum.core.compat["common/helpers/listItems"]},,function(e,t){e.exports=flarum.core.compat["admin/components/PermissionGrid"]},function(e,t){e.exports=flarum.core.compat["admin/components/UserListPage"]},function(e,t){e.exports=flarum.core.compat["admin/components/ExtensionsWidget"]},,function(e,t){e.exports=flarum.core.compat["admin/components/StatusWidget"]},function(e,t){e.exports=flarum.core.compat["common/components/Dropdown"]},,,,function(e,t){e.exports=flarum.core.compat["admin/components/AdminNav"]},function(e,t){e.exports=flarum.core.compat["admin/components/AdminHeader"]},function(e,t){e.exports=flarum.core.compat["common/utils/classList"]},function(e,t){e.exports=flarum.core.compat["common/helpers/avatar"]},function(e,t){e.exports=flarum.core.compat["common/helpers/username"]},function(e,t){e.exports=flarum.core.compat["common/components/SelectDropdown"]},function(e,t){e.exports=flarum.core.compat["common/components/LinkButton"]},function(e,t){e.exports=flarum.core.compat["admin/components/DashboardPage"]},function(e,t){e.exports=flarum.core.compat["admin/components/HeaderSecondary"]},function(e,t){e.exports=flarum.core.compat["common/components/Navigation"]},function(e,t){e.exports=flarum.core.compat["common/components/Alert"]},function(e,t){e.exports=flarum.core.compat["admin/components/PermissionsPage"]},function(e,t){e.exports=flarum.core.compat["admin/components/AdminPage"]},function(e,t){e.exports=flarum.core.compat["admin/utils/getCategorizedExtensions"]},function(e,t){e.exports=flarum.core.compat["admin/utils/isExtensionEnabled"]},function(e,t){e.exports=flarum.core.compat["common/components/Link"]},function(e,t){e.exports=flarum.core.compat["common/components/Switch"]},function(e,t,n){"use strict";n.r(t);var a=n(0),s=n(16),o=n.n(s),i=n(17),r=n.n(i),c=n(18),l=n.n(c),u=n(1),d=n.n(u),p=n(19),f=n.n(p),h=n(20),v=n.n(h),x=n(5),g=n.n(x),b=n(21),y=n.n(b),N=n(22),A=n.n(N),P=n(23),j=n.n(P),E=n(24),O=n.n(E),_=n(3),k=n.n(_),w=n(9),S=n.n(w),B=n(25),C=n.n(B),L=n(26),U=n.n(L),I=n(11),H=n.n(I),D=n(12),z=n.n(D),W=n(2),T=n.n(W),M=n(27),q=n.n(M),F=n(7),G=n.n(F),K=n(8),V=n.n(K),J=n(4);function Q(e,t){return(Q=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function R(e,t){e.prototype=Object.create(t.prototype),e.prototype.constructor=e,Q(e,t)}var X=function(e){function t(){for(var t,n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];return(t=e.call.apply(e,[this].concat(a))||this).loading=!1,t}R(t,e);var n=t.prototype;return n.view=function(t){return this.attrs.loading=this.loading,this.attrs.className=(this.attrs.className||"")+" Button",app.data.settings[this.attrs.setting]?(this.attrs.onclick=this.remove.bind(this),m("div",{className:"UploadImageButton-container"},m("div",{className:"UploadImageButton-image-container"},m("img",{className:"UploadImageButton-image",src:app.forum.attribute(this.attrs.serializedName),alt:""})),e.prototype.view.call(this,Object(J.a)({},t,{children:app.translator.trans("core.admin.upload_image.remove_button")})))):(this.attrs.onclick=this.upload.bind(this),e.prototype.view.call(this,Object(J.a)({},t,{children:app.translator.trans("core.admin.upload_image.upload_button")})))},n.upload=function(){var e=this;this.loading||$('<input type="file">').appendTo("body").hide().click().on("change",(function(t){var n=new FormData;n.append(e.attrs.name,$(t.target)[0].files[0]),e.loading=!0,m.redraw(),app.request({method:"POST",url:e.resourceUrl(),serialize:function(e){return e},body:n}).then(e.success.bind(e),e.failure.bind(e))}))},n.remove=function(){this.loading=!0,m.redraw(),app.request({method:"DELETE",url:this.resourceUrl()}).then(this.success.bind(this),this.failure.bind(this))},n.resourceUrl=function(){return app.forum.attribute("apiUrl")+"/"+this.attrs.routeName},n.success=function(e){window.location.reload()},n.failure=function(e){this.loading=!1,m.redraw()},t}(T.a),Y=n(28),Z=n.n(Y),ee=n(29),te=n.n(ee),ne=n(30),ae=n.n(ne),se=n(31),oe=n.n(se),ie=function(e){function t(){return e.apply(this,arguments)||this}R(t,e);var n=t.prototype;return n.oninit=function(t){e.prototype.oninit.call(this,t),this.extensions=app.categorizedExtensions||te()()},n.headerInfo=function(){return{className:"Asirem-ExtensionsPage",icon:"fas fa-puzzle-piece",title:app.translator.trans("sycho-asirem.admin.extensions"),description:"List of all installed extensions."}},n.content=function(){var e=this;return m("div",{className:"Asirem-ExtensionCategories"},m("div",{className:"Asirem-ExtensionCategories-container"},Object.keys(this.extensions).map((function(t){return m("div",{className:"Asirem-ExtensionCategory"},m("h3",{className:"Asirem-ExtensionCategory-title"},app.categoryLabels&&app.categoryLabels[t]||app.translator.trans("core.admin.nav.categories."+t)),m("div",{className:"Asirem-ExtensionCategory-container"},e.extensions[t].map((function(e){return m(oe.a,{href:app.route("extension",{id:e.id}),className:"Asirem-Extension"},m("div",{className:"Asirem-Extension-icon"},m("span",{className:"ExtensionListItem-icon ExtensionIcon",style:e.icon},e.icon?d()(e.icon.name):"")),m("div",{className:"Asirem-Extension-content"},m("div",{className:"Asirem-Extension-title"},m("div",{className:["ExtensionListItem-Dot","Asirem-Extension-state",ae()(e.id)?"enabled":"disabled"].join(" ")}),m("div",{className:"Asirem-Extension-title-value"},e.extra["flarum-extension"].title)),m("div",{className:"Asirem-Extension-details"},m("div",{className:"Asirem-Extension-package"},e.name),m("div",{className:"Asirem-Extension-version"},e.version))))}))))}))))},t}(Z.a),re=n(32),ce=n.n(re),me=function(e){function t(){return e.apply(this,arguments)||this}R(t,e);var n=t.prototype;return n.oninit=function(){app.current.data.extension=this.extension.extra["flarum-extension"].title},n.header=function(){var e=this.topItems();return e.get("version").attrs.className+=" UiKit-Label",m("div",{className:"ExtensionPage-header AdminHeader"},m("div",{className:"AdminHeader-container"},m("span",{className:"AdminHeader-icon",style:this.extension.icon},this.extension.icon?d()(this.extension.icon.name):""),m("div",{className:"AdminHeader-info"},m("h2",{className:"AdminHeader-title"},this.extension.extra["flarum-extension"].title),m("div",{className:"AdminHeader-description helpText"},this.extension.description)),m("div",{className:"ExtensionPage-headerTopItems"},m("ul",null,g()(e.toArray())))))},n.view=function(){var e=this;if(!this.extension)return null;var t=this.sections(),n=this.infoItems();return this.activeSection=this.activeSection||"content",t.items.permissions&&(t.items.permissions.content[0]=t.items.permissions.content[0].children[1].children),m("div",{className:"ExtensionPage "+this.className()},this.header(),m("div",{className:"ExtensionPage-body"},m("div",{className:"container"},m("div",{className:"ExtensionPage-headerItems"},m(ce.a,{state:this.isEnabled(),onchange:this.toggle.bind(this,this.extension.id)},this.isEnabled(this.extension.id)?app.translator.trans("core.admin.extension.enabled"):app.translator.trans("core.admin.extension.disabled")),m("aside",{className:"ExtensionInfo"},m("ul",null,g()(n.toArray())))),m("div",{className:"ExtensionPage-sections-nav"},Object.keys(t.items).map((function(t){return m(T.a,{className:"Button ExtensionPage-sections-nav-item",onclick:function(){return e.activeSection=t}},t)}))),m("div",{className:"ExtensionPage-sections"},Object.keys(t.items).map((function(n){return m("div",{className:["ExtensionPage-section",e.activeSection===n?"ExtensionPage-section--active":""].join(" ")},t.items[n].content)}))))))},n.content=function(e){return this.isEnabled()?e():m("div",{className:"Asirem-infobox"},app.translator.trans("core.admin.extension.enable_to_see"))},t}(k.a);app.initializers.add("sycho-asirem",(function(e){e.routes.extensions={path:"/extensions",component:ie},e.extensionData.for("sycho-asirem").registerSetting((function(){return m("div",{className:"Form-group HeroImageForm"},m("label",{for:"sycho-asirem.welcome_hero_banner"},e.translator.trans("sycho-asirem.admin.settings.hero_banner")),m(X,{setting:"sycho-asirem.welcome_hero_banner",serializedName:"welcomeHeroBanner",routeName:"asirem_banner",name:"asirem_banner"}))})).registerSetting({setting:"sycho-asirem.welcome_hero_banner_position",type:"text",label:e.translator.trans("sycho-asirem.admin.settings.hero_banner_position")}),Object(a.override)(o.a.prototype,"view",(function(){var t=this.items();return t.remove("search"),t.remove("category-core"),t.add("extensions",m(A.a,{href:e.route("extensions"),icon:"fas fa-puzzle-piece",title:e.translator.trans("sycho-asirem.admin.extensions"),active:["extension","extensions"].includes(e.current.data.routeName)},m("span",null,e.translator.trans("sycho-asirem.admin.extensions")),e.current.data.extension?m("span",{className:"Asirem-extensions-nav-current"},e.current.data.extension):[])),m(y.a,{className:"AdminNav App-titleControl AdminNav-Main",buttonClassName:"Button"},t.toArray().concat())})),Object(a.extend)(j.a.prototype,"availableWidgets",(function(e){e.remove("extensions")})),Object(a.extend)(C.a.prototype,"getBackButton",(function(t){return t.attrs.className=t.attrs.className.replace("Button--icon",""),"extension"===e.current.data.routeName?(t.attrs.href=e.route("extensions"),delete t.attrs.onclick,t.children=e.translator.trans("sycho-asirem.admin.extensions")):t.children=e.translator.trans("sycho-asirem.admin.header.go_back"),t})),Object(a.override)(r.a.prototype,"view",(function(t,n){var a=this;switch(this.attrs.className){case"DashboardPage-header":this.handleClearCache=H.a.prototype.handleClearCache,this.controls=function(){return m(z.a,{label:e.translator.trans("core.admin.dashboard.tools_button"),icon:"fas fa-cog",buttonClassName:"Button",menuClassName:"Dropdown-menu--right"},m(T.a,{onclick:a.handleClearCache.bind(a)},e.translator.trans("core.admin.dashboard.clear_cache_button")))};break;case"Asirem-ExtensionsPage-header":this.controls=function(){var e=S.a.prototype.controlItems().toArray()[0].children;return e[0].attrs.menuClassName+=" Dropdown-menu--right",e}}return m("div",{className:l()(["AdminHeader",this.attrs.className])},m("div",{className:"container AdminHeader-container"},m("div",{className:"AdminHeader-icon"},d()(this.attrs.icon)),m("div",{className:"AdminHeader-info"},m("h2",{className:"AdminHeader-title"},n.children),m("div",{className:"AdminHeader-description"},this.attrs.description)),m("div",{className:"AdminHeader-controls"},this.controls&&this.controls())))})),Object(a.override)(H.a.prototype,"content",(function(t){var n=this.items(),a=e.data.updateAvailable;n.remove("tools");var s={"version-flarum":"fas fa-comment","version-php":"fab fa-php","version-mysql":"fas fa-database"};Object.keys(n.items).map((function(e){var t=n.get(e);t[0].tag="div",t[0].attrs.className="Asirem-StatusWidget-key",t[2]=m("div",{className:"Asirem-StatusWidget-value"},t[2]),t[1]=m("div",{className:"Asirem-StatusWidget-content"},[t[0],t[2]]),t[0]=m("div",{className:"Asirem-StatusWidget-icon"},d()(s[e])),delete t[2]})),a&&n.get("version-flarum").push(m(T.a,{className:"Asirem-StatusWidget-control Button Button--icon",icon:"fas fa-arrow-alt-circle-up","aria-expanded":"true"}));var o=[m("ul",null,g()(n.toArray()))];return a&&o.push(m("div",{className:"Asirem-VersionUpdate"},m(U.a,{type:"info",dismissible:!1},m("h3",null,e.translator.trans("sycho-asirem.admin.upgrade_alert.title",{version:a})),m("p",null,e.translator.trans("sycho-asirem.admin.upgrade_alert.content",{discuss_link:m("a",{href:"https://discuss.flarum.org/t/blog"},"https://discuss.flarum.org/t/blog")}))))),o})),Object(a.extend)(q.a.prototype,"content",(function(e){e[0].children[1].attrs.className+=" Button--dashed"})),Object(a.extend)(G.a.prototype,"oninit",(function(){this.selectedScopes=Object.keys(this.scopeItems(!0).items)})),Object(a.override)(G.a.prototype,"view",(function(t,n){var a=this,s=this.scopeItems(!0);return[m("div",{className:"Asirem-PermissionsPage-scopes"},m("div",{className:"Asirem-PermissionsPage-scopes-title"},"Scopes"),m("div",{className:"Asirem-PermissionsPage-scopes-controls"},m(T.a,{className:"Button",icon:"fas fa-eye",onclick:function(){return a.selectedScopes=Object.keys(s.items)}},"Show All"),m(T.a,{className:"Button",icon:"fas fa-eye-slash",onclick:function(){return a.selectedScopes=["global"]}},"Hide All"),m(z.a,{label:e.translator.trans("sycho-asirem.admin.permissions.filter_scopes"),icon:"fas fa-tags",buttonClassName:"Button",menuClassName:"Dropdown-menu--right"},Object.keys(s.items).map((function(e){return m(T.a,{icon:a.selectedScopes.includes(e)?"fas fa-check":"",onclick:function(){a.selectedScopes.includes(e)?a.selectedScopes=a.selectedScopes.filter((function(t){return t!==e})):a.selectedScopes.push(e)}},s.get(e).label)}))))),m("div",{className:"PermissionsPage-permissions-overflow"},t(n))]})),Object(a.extend)(G.a.prototype,"scopeItems",(function(e,t){var n=this;if(t)return e;Object.keys(e.items).map((function(t){n.selectedScopes.includes(t)||e.remove(t)}))})),Object(a.extend)(G.a.prototype,["oncreate","onupdate"],(function(e){$(".PermissionGrid-child .Button--text").removeClass("Button--text")})),Object(a.extend)(V.a.prototype,"columns",(function(t){t.add("avatar",{name:d()("fas fa-user-circle"),content:function(e){return f()(e,{className:"UserListPage-grid-avatar"})}},95),t.remove("username"),t.add("username",{name:e.translator.trans("core.admin.users.grid.columns.username.title"),content:function(e){var t=v()(e),n=e.username();return console.log(t,n),n===t.text?n:[n," (",t,")"]}},90);var n=t.get("joinDate");n.name=[d()("fas fa-clock")," ",n.name];var a=t.get("emailAddress");a.name=[d()("far fa-envelope")," ",a.name],t.add("profileLink",{name:"",content:function(t){return m("a",{className:"Button Button--icon UserList-profileLinkBtn",href:e.forum.attribute("baseUrl")+"/u/"+t.slug()},d()("fas fa-link"))}})})),Object(a.extend)(V.a.prototype,"onupdate",(function(e){this.$(".UserList-emailIconBtn").removeClass("Button--text")})),Object(a.extend)(V.a.prototype,"content",(function(t){t[0]=m("div",{className:"UserListPage-stat-container"},m("div",{class:"UserListPage-totalUsers UserListPage-stat"},m("div",{className:"UserListPage-stat-value"},this.userCount),m("div",{className:"UserListPage-stat-key"},e.translator.trans("core.admin.users.total_users",{count:0})[0].replace(": ",""))))})),Object(a.extend)(O.a.prototype,"items",(function(e){e.get("help").attrs.className="Button Button--link"})),Object(a.extend)(k.a.prototype,"oninit",me.prototype.oninit),Object(a.override)(k.a.prototype,"header",me.prototype.header),Object(a.override)(k.a.prototype,"view",me.prototype.view),Object(a.override)(k.a.prototype,"content",me.prototype.content)}),-999999)}]);
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./admin.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./admin.js":
+/*!******************!*\
+  !*** ./admin.js ***!
+  \******************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _src_admin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/admin */ "./src/admin/index.js");
+/* empty/unused harmony star reexport */
+
+/***/ }),
+
+/***/ "./src/admin/index.js":
+/*!****************************!*\
+  !*** ./src/admin/index.js ***!
+  \****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/extend */ "flarum/extend");
+/* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_extend__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var flarum_common_helpers_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/common/helpers/icon */ "flarum/common/helpers/icon");
+/* harmony import */ var flarum_common_helpers_icon__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_common_helpers_icon__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var flarum_common_components_Dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/common/components/Dropdown */ "flarum/common/components/Dropdown");
+/* harmony import */ var flarum_common_components_Dropdown__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_common_components_Dropdown__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var flarum_common_components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/common/components/Button */ "flarum/common/components/Button");
+/* harmony import */ var flarum_common_components_Button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_common_components_Button__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var flarum_admin_components_PermissionsPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! flarum/admin/components/PermissionsPage */ "flarum/admin/components/PermissionsPage");
+/* harmony import */ var flarum_admin_components_PermissionsPage__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(flarum_admin_components_PermissionsPage__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var flarum_admin_components_PermissionGrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! flarum/admin/components/PermissionGrid */ "flarum/admin/components/PermissionGrid");
+/* harmony import */ var flarum_admin_components_PermissionGrid__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(flarum_admin_components_PermissionGrid__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+app.initializers.add('afrux-asirem', function (app) {
+  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_admin_components_PermissionsPage__WEBPACK_IMPORTED_MODULE_4___default.a.prototype, 'content', function (vnode) {
+    vnode[0].children[1].attrs.className += " Button--dashed";
+  });
+  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_admin_components_PermissionGrid__WEBPACK_IMPORTED_MODULE_5___default.a.prototype, 'oninit', function () {
+    this.selectedScopes = Object.keys(this.scopeItems(true).items);
+  });
+  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["override"])(flarum_admin_components_PermissionGrid__WEBPACK_IMPORTED_MODULE_5___default.a.prototype, 'view', function (original, vnode) {
+    var _this = this;
+
+    var scopes = this.scopeItems(true);
+    return [m("div", {
+      className: "Asirem-PermissionsPage-scopes"
+    }, m("div", {
+      className: "Asirem-PermissionsPage-scopes-title"
+    }, "Scopes"), m("div", {
+      className: "Asirem-PermissionsPage-scopes-controls"
+    }, m(flarum_common_components_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "Button",
+      icon: "fas fa-eye",
+      onclick: function onclick() {
+        return _this.selectedScopes = Object.keys(scopes.items);
+      }
+    }, "Show All"), m(flarum_common_components_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "Button",
+      icon: "fas fa-eye-slash",
+      onclick: function onclick() {
+        return _this.selectedScopes = ['global'];
+      }
+    }, "Hide All"), m(flarum_common_components_Dropdown__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      label: app.translator.trans('afrux-asirem.admin.permissions.filter_scopes'),
+      icon: "fas fa-tags",
+      buttonClassName: "Button",
+      menuClassName: "Dropdown-menu--right"
+    }, Object.keys(scopes.items).map(function (key) {
+      return m(flarum_common_components_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        icon: _this.selectedScopes.includes(key) ? 'fas fa-check' : '',
+        onclick: function onclick() {
+          if (_this.selectedScopes.includes(key)) _this.selectedScopes = _this.selectedScopes.filter(function (scope) {
+            return scope !== key;
+          });else _this.selectedScopes.push(key);
+        }
+      }, scopes.get(key).label);
+    })))), m("div", {
+      className: "PermissionsPage-permissions-overflow"
+    }, original(vnode))];
+  });
+  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_admin_components_PermissionGrid__WEBPACK_IMPORTED_MODULE_5___default.a.prototype, 'scopeItems', function (scopeItems, internal) {
+    var _this2 = this;
+
+    if (internal) return scopeItems;
+    Object.keys(scopeItems.items).map(function (key) {
+      if (!_this2.selectedScopes.includes(key)) {
+        scopeItems.remove(key);
+      }
+    });
+  });
+  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_admin_components_PermissionGrid__WEBPACK_IMPORTED_MODULE_5___default.a.prototype, ['oncreate', 'onupdate'], function (vnode) {
+    $('.PermissionGrid-child .Button--text').removeClass('Button--text');
+  });
+}, -999999);
+
+/***/ }),
+
+/***/ "flarum/admin/components/PermissionGrid":
+/*!************************************************************************!*\
+  !*** external "flarum.core.compat['admin/components/PermissionGrid']" ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['admin/components/PermissionGrid'];
+
+/***/ }),
+
+/***/ "flarum/admin/components/PermissionsPage":
+/*!*************************************************************************!*\
+  !*** external "flarum.core.compat['admin/components/PermissionsPage']" ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['admin/components/PermissionsPage'];
+
+/***/ }),
+
+/***/ "flarum/common/components/Button":
+/*!*****************************************************************!*\
+  !*** external "flarum.core.compat['common/components/Button']" ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['common/components/Button'];
+
+/***/ }),
+
+/***/ "flarum/common/components/Dropdown":
+/*!*******************************************************************!*\
+  !*** external "flarum.core.compat['common/components/Dropdown']" ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['common/components/Dropdown'];
+
+/***/ }),
+
+/***/ "flarum/common/helpers/icon":
+/*!************************************************************!*\
+  !*** external "flarum.core.compat['common/helpers/icon']" ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['common/helpers/icon'];
+
+/***/ }),
+
+/***/ "flarum/extend":
+/*!***********************************************!*\
+  !*** external "flarum.core.compat['extend']" ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['extend'];
+
+/***/ })
+
+/******/ });
 //# sourceMappingURL=admin.js.map

@@ -1,0 +1,89 @@
+.Asirem-TagTiles {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 8px;
+}
+
+.Asirem-TagTile {
+  --tag-bg: @control-bg;
+  --tag-color: @control-color;
+  .asirem-border-radius(~".Asirem-TagTile-icon .icon");
+  display: flex;
+
+  &.colored {
+    --tag-color: @body-bg;
+  }
+
+  &:not(.colored) &-icon .icon {
+    color: var(--tag-color);
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-name {
+    margin: 0;
+  }
+
+  &-info {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    color: var(--tag-color);
+    background: var(--tag-bg);
+    border-radius: @border-radius;
+    padding: 16px 16px 16px 0;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .icon {
+      .asirem-icon-block(50px);
+      font-size: 28px;
+      background-color: @body-bg;
+      color: var(--tag-bg);
+    }
+  }
+
+  &-lastPostedDiscussion {
+    margin-top: auto;
+    font-weight: bold;
+    color: var(--tag-color);
+    opacity: 0.6;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    &-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+    }
+
+    time {
+      margin-left: auto;
+      font-style: italic;
+    }
+  }
+
+  &-children + &-lastPostedDiscussion {
+    padding-top: 16px;
+  }
+}
+
+.Asirem-TagCloud {
+  text-align: center;
+  margin-top: 16px;
+}

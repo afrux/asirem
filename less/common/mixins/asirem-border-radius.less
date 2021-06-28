@@ -1,13 +1,19 @@
 .asirem-border-radius(@elem) {
   &:nth-child(2n) {
     @{elem} {
-      border-radius: @asirem-border-radius;
+      border-radius: @asirem-border-radius-a;
     }
   }
 
   &:nth-child(2n+1) {
     @{elem} {
-      border-radius: @asirem-border-radius-alt;
+      border-radius: @asirem-border-radius-b;
+    }
+  }
+
+  &:nth-child(3n) {
+    @{elem} {
+      border-radius: @asirem-border-radius-c;
     }
   }
 }

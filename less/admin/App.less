@@ -1,43 +1,17 @@
-#Asirem-adminWaves {
+.Asirem-adminWaves {
+  display: none;
+}
+
+.App-nav-title {
   display: none;
 }
 
 @media @desktop-up {
-  .App {
-    padding-top: 0;
-  }
-  .App-header {
-    background-color: transparent;
-    padding: 30px;
-    height: unset;
-
-    > .container {
-      padding: 0;
-    }
-  }
-  .affix {
-    .App-header {
-      position: relative;
-      .box-shadow(none);
-    }
-    .App-nav {
-      position: sticky;
-      top: 0;
-      .box-shadow(none);
-      overflow: auto;
-    }
-  }
   .App-nav {
     background-color: @admin-nav-bg;
   }
-  .App-content {
-    border-top: 0;
 
-    .sideNavOffset {
-      margin: 0;
-    }
-  }
-  .Asirem-Header-title {
+  .ThemeBase-Header-title {
     margin: 0;
     height: 90px;
     margin-bottom: 30px;
@@ -99,7 +73,7 @@
     }
   }
 
-  #Asirem-adminWaves {
+  .Asirem-adminWaves {
     display: block;
     position: absolute;
     transform: scaleY(1) scaleX(.15) rotate(2deg);
@@ -109,22 +83,19 @@
     max-height: 100%;
     fill: @admin-nav-bg;
   }
+}
 
-  .Asirem-extensions-nav-current {
-    display: block;
-    font-size: 11px;
-    margin-top: -5px;
-    font-weight: 500;
-    color: @control-color;
-    white-space: nowrap;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+@media @tablet {
+  .App {
+    &-header {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
-  .Navigation-back {
-    padding-right: 13px;
-    padding-left: 13px;
+  .container {
+    width: unset;
+    max-width: 100%;
   }
 }
 

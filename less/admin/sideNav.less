@@ -1,15 +1,10 @@
 .sideNavOffset {
   background-color: @control-bg;
 
-  /*.Button:not(.Button--primary):not([disabled]):not(.Button--dashed) {
-    .Button--color(@control-color, @body-bg);
-  }*/
-
   .Button {
     --control-bg: @body-bg;
 
     &--primary {
-      --control-color: @body-bg;
       --control-bg: @primary-color;
     }
   }
@@ -22,6 +17,24 @@
 .Button {
   background-color: var(--control-bg);
   color: var(--control-color);
+
+  &--primary {
+    --control-color: @control-bg;
+    --control-bg: @primary-color;
+  }
+}
+
+@media @tablet {
+  .sideNav {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media @tablet, @phone {
+  .sideNavOffset {
+    padding-top: 15px;
+  }
 }
 
 @media @desktop-up {

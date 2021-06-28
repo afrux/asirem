@@ -1,6 +1,6 @@
 {
-  "name": "sycho/flarum-asirem",
-  "description": "The weird Flarum theme made with potatoes as fuel.",
+  "name": "afrux/asirem",
+  "description": "The weird Flarum theme made with potatoes as fuel, by Afrux.",
   "keywords": [
     "flarum"
   ],
@@ -9,8 +9,7 @@
   "require": {
     "flarum/core": "^1.0.0",
     "sycho/flarum-uikit": "^0.1.0",
-    "afrux/flarum-theme-base": "^0.1.0",
-    "knplabs/packagist-api": "^1.0.0"
+    "afrux/flarum-theme-base": "^0.1.0"
   },
   "require-dev": {
     "flarum/testing": "^1.0.0",
@@ -19,19 +18,19 @@
   },
   "authors": [
     {
-      "name": "Sami Ilyes Mazouz",
+      "name": "Sami Mazouz",
       "email": "ilyasmazouz@gmail.com",
       "role": "Developer"
     }
   ],
   "autoload": {
     "psr-4": {
-      "SychO\\Asirem\\": "src/"
+      "Afrux\\Asirem\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "SychO\\Asirem\\Tests\\": "tests/"
+      "Afrux\\Asirem\\Tests\\": "tests/"
     }
   },
   "extra": {

@@ -1,8 +1,7 @@
-.AdminHeader {
+.ThemeBase-AdminHeader {
   background-color: transparent;
   color: @text-color;
   padding: 0;
-  margin-bottom: 8px;
 
   &-title, h2 {
     color: inherit !important;
@@ -13,19 +12,9 @@
     opacity: 0.8;
   }
 
-  &-controls {
-    margin-left: auto;
-  }
-
   &-container {
-    display: flex;
-    align-items: center;
-    // background: @admin-nav-bg;
     padding: 0 0 15px 0px !important;
-    // width: -moz-fit-content;
-    // width: fit-content;
     border-radius: 0 14px 14px 0;
-    position: relative;
 
     @media @desktop-up {
       .App-content & {
@@ -34,45 +23,11 @@
         max-width: unset;
       }
     }
-
-    /*&::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: @control-bg;
-      box-shadow: -8px 8px 0 1px @admin-nav-bg;
-      top: -20px;
-      left: 0;
-      border-radius: 14px;
-    }
-
-    &::after {
-      bottom: -20px;
-      top: unset;
-      box-shadow: -8px -8px 0 1px @admin-nav-bg;
-    }*/
-  }
-
-  &-info {
-    flex-direction: column;
-  }
-
-  .icon {
-    margin-right: 7px;
-
-    .Button & {
-      margin-right: 0;
-    }
   }
 
   &-icon {
     --size: 60px;
     font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: var(--size);
     height: var(--size);
     border-radius: 14px;
@@ -85,9 +40,12 @@
       margin: 0;
     }
   }
+}
 
-  .AdminHeader-title {
-    margin: 0;
+@media @tablet, @phone {
+  .ThemeBase-AdminHeader {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -95,7 +53,7 @@
   background-color: transparent !important;
 }
 
-.ExtensionPage {
+.ThemeBase-ExtensionPage {
   padding-bottom: 24px;
 
   &-body {
@@ -110,81 +68,55 @@
       }
     }
   }
-}
 
-.ExtensionPage-headerItems {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.ExtensionPage-headerItems, .ExtensionPage-sections-nav {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.ExtensionPage-headerItems, .ExtensionPage-sections {
-  background-color: @body-bg;
+  &-section {
+    padding: 15px;
 
-  .Button {
-    --control-bg: @control-bg;
-
-    &--primary {
-      --control-bg: @primary-color;
+    .container {
+      padding: 0;
+      max-width: unset !important;
+      width: unset !important;
     }
   }
-}
-.ExtensionPage-sections-nav {
-  background-color: @control-bg-light;
 
-  .Button {
-    border-radius: 0;
-
-    --control-bg: @control-bg-light;
-  }
-}
-.ExtensionPage-section {
-  padding: 15px;
-  display: none;
-
-  .container {
-    padding: 0;
-    max-width: unset !important;
-    width: unset !important;
+  &-headerItems {
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
-  &--active {
-    display: block;
+  &-headerItems, &-sections-nav {
+    padding-left: 15px;
+    padding-right: 15px;
   }
-}
-.ExtensionPage-settings {
-  margin: 0;
-  padding: 0;
 
-  .ExtensionPage-subHeader {
-    margin: 0;
-  }
-}
-.ExtensionPage-header .helpText {
-  margin: 0;
-}
-.ExtensionPage-subHeader {
-  margin: 0;
-}
-.ExtensionInfo {
-  ul {
-    list-style: none;
-    display: flex;
-  }
-  li {
-    margin-left: 8px;
-  }
-  li, a {
-    color: @control-color;
-  }
-  .icon {
-    margin-right: 6px;
-  }
-}
+  &-headerItems, &-sections {
+    background-color: @body-bg;
 
-.UploadImageButton-image {
-  max-width: 400px;
-  max-height: 300px;
+    .Button {
+      --control-bg: @control-bg;
+
+      &--primary {
+        --control-bg: @primary-color;
+      }
+    }
+  }
+
+  &-sections-nav {
+    background-color: @control-bg-light;
+
+    .Button {
+      border-radius: 0;
+      --control-bg: @control-bg-light;
+
+      &--active {
+        --control-bg: @control-bg;
+      }
+    }
+  }
+
+  &-ExtensionInfo {
+    li, a {
+      color: @control-color;
+    }
+  }
 }

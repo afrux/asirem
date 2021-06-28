@@ -1,12 +1,22 @@
 .Hero {
-  // background: @control-bg !important;
-  // color: @control-color !important;
-  // text-align: start;
   position: relative;
   z-index: 0;
   margin: 15px auto 0;
   max-width: @screen-desktop-hd;
   border-radius: @border-radius;
+
+  @media @desktop {
+    max-width: @screen-desktop;
+  }
+
+  @media @tablet {
+    max-width: @screen-tablet;
+  }
+
+  @media @phone {
+    max-width: calc(~"100% - 30px");
+    margin-bottom: 15px;
+  }
 
   &--banner {
     --banner-position: center;
@@ -14,19 +24,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: var(--banner-position);
-    color: @text-color;
-  }
-
-  &.TagHero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(330deg, rgba(0, 0, 0, .45), transparent);
-    border-radius: @border-radius;
-    z-index: -1;
+    color: @hero-color;
   }
 
   .container {
@@ -41,20 +39,3 @@
 .darkenBackground {
   border-radius: @border-radius;
 }
-
-/*.Asirem-forumWaves {
-  position: absolute;
-  left: 50%;
-  bottom: -27px;
-  fill: @body-bg;
-  background: inherit;
-  backface-visibility: hidden;
-  z-index: -1;
-  height: 46px;
-  transform: translateX(-50%) rotate(-1.15deg);
-  display: flex;
-
-  path {
-    transform: scaleY(0.15);
-  }
-}*/

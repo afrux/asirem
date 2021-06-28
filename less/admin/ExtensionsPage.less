@@ -1,35 +1,12 @@
-.Asirem-ExtensionsPage {
-  padding-bottom: 24px;
-}
-
-.Asirem-ExtensionCategory {
+.ThemeBase-ExtensionCategory {
   .asirem-block();
   padding: 15px;
-
-  &:not(:first-child) {
-    margin-top: 15px;
-  }
-
-  &-title {
-    margin-top: 0;
-  }
-
-  &-container {
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
-.Asirem-Extension {
+.ThemeBase-Extension {
   --icon-size: 48px;
-  display: grid;
-  grid-gap: 8px;
-  grid-template-columns: 50px minmax(0, 1fr);
-  align-items: center;
   padding: 6px 18px 6px 6px;
   border-radius: @border-radius;
-  // border: 2px solid transparent;
   transition: border-color 0.4s, background-color 0.4s;
   color: inherit;
   .asirem-border-radius(~'.ExtensionIcon');
@@ -37,8 +14,6 @@
   &:hover {
     text-decoration: none;
     background-color: @control-bg;
-    // border-color: @control-color;
-    // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 
   &-icon {
@@ -51,51 +26,14 @@
   }
 
   &-title {
-    display: flex;
-    align-items: center;
-
     &-value {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       font-size: 14px;
       font-weight: 600;
     }
   }
 
-  &-version {
-    // margin-left: auto;
-    white-space: nowrap;
-  }
-
-  &-desc {
-    white-space: nowrap;
-    max-width: calc(~"100% - 14px");
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   &-details {
-    display: flex;
     font-size: 12px;
     opacity: 0.6;
-
-    > *:not(:first-child)::before {
-      content: "\2022";
-      margin: 0 4px;
-    }
-
-    > * {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 50%;
-    }
-  }
-
-  &-state {
-    position: relative;
-    right: 0;
-    margin: 0 5px 0 0;
   }
 }
