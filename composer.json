@@ -8,7 +8,6 @@
   "license": "MIT",
   "require": {
     "flarum/core": "^1.0.0",
-    "sycho/flarum-uikit": "^0.1.0",
     "afrux/flarum-theme-base": "^0.1.0"
   },
   "require-dev": {

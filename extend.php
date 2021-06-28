@@ -15,8 +15,6 @@ use Flarum\Extend;
 use Flarum\Frontend\Document;
 
 return [
-    new \SychO\UiKit\Extend\Register,
-
     new \Afrux\ThemeBase\Extend\Init('afrux-asirem'),
     new \Afrux\ThemeBase\Extend\Footer,
     new \Afrux\ThemeBase\Extend\UploadableBanner,
