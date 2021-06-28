@@ -1,33 +1,31 @@
-# Asirem
+<p align=center>
+<img src="https://lh3.googleusercontent.com/-CDid7LgrH-M/YNn460wKUMI/AAAAAAAAFdY/ttAl_XT055QzWO9bEWKPbzWBPzhPUg1UwCLcBGAsYHQ/s16000/asirem.png" alt="asirem_logo">
+<h1>Asirem</h1>
+<img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"> <a href="https://packagist.org/packages/afrux/asirem"><img alt="Latest Stable Version" src="https://img.shields.io/packagist/v/afrux/asirem.svg?style=flat-square"></a> <a href="https://packagist.org/packages/afrux/asirem"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/afrux/asirem.svg?style=flat-square"></a> <a href="https://www.buymeacoffee.com/sycho"><img alt="donate" src="https://img.shields.io/badge/donate-buy%20me%20a%20coffee-%23ffde39?style=flat-square"></a>
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/sycho/flarum-asirem.svg)](https://packagist.org/packages/sycho/flarum-asirem) [![Total Downloads](https://img.shields.io/packagist/dt/sycho/flarum-asirem.svg)](https://packagist.org/packages/sycho/flarum-asirem)
+The weird <a href="http://flarum.org">Flarum</a> theme made with potatoes as fuel, by <a href="https://github.com/afrux">Afrux</a>.
 
-A [Flarum](http://flarum.org) Theme, by [Afrux](https://github.com/afrux).
-
-![thumbnail](https://lh3.googleusercontent.com/-zZ09tkO08xI/YHwuyvXY4AI/AAAAAAAAFX4/2R4XyWiACoo7uMuXYQ8epq_W7ohmhCkBQCLcBGAsYHQ/s16000/Screenshot%2Bfrom%2B2021-04-17%2B21-49-59.png)
-
-![forum_side_screenshot](https://lh3.googleusercontent.com/-hT9o5W8HTVc/YJUjky6EmkI/AAAAAAAAFZM/a8xu26cfODIu813M23CY_baSvEt0XOVhQCLcBGAsYHQ/s16000/Screenshot%2Bfrom%2B2021-05-07%2B12-24-20.png)
-
-![admin_side_screenshot](https://lh3.googleusercontent.com/-a_yl5lPzrNs/YJUjx9-24nI/AAAAAAAAFZQ/K-qxeg3ifyMC6bGxbHJ58FzpwYFuwibLwCLcBGAsYHQ/s16000/Screenshot%2Bfrom%2B2021-05-07%2B12-24-54.png)
+<img width="400" src="https://lh3.googleusercontent.com/-N4b-Oqq18To/YNno5ZmnmGI/AAAAAAAAFdA/49F0UzmZFecHv7baBQTtM6a_JO5n7s_dwCLcBGAsYHQ/s16000/Dark_Dashboard_Front.png" alt="asirem_theme_dashboard_screenshot_1"><img width="400" src="https://lh3.googleusercontent.com/-edU2_P66Vlo/YNnpaU1yjVI/AAAAAAAAFdI/LzAB9qdLbGMGWFzyyovTow770r8b8Fw7wCLcBGAsYHQ/s16000/Light_Dashboard_Front.png" alt="asirem_theme_dashboard_screenshot_1">
+<img src="https://lh3.googleusercontent.com/-qhKeJv4373Y/YNnqrVK6MlI/AAAAAAAAFdQ/pcRH7ZobQdMJYiIQ2HTyjJnZpXqUHMg6QCLcBGAsYHQ/s16000/Screenshot%2Bfrom%2B2021-06-27%2B22-57-32.png" alt="asirem_theme_forum_screenshot_1">
+</p>
 
 ### Installation
 
 Install with composer:
 
 ```sh
-composer require sycho/flarum-asirem:"*"
+composer require afrux/asirem
 ```
 
 ### Updating
 
 ```sh
-composer update sycho/flarum-asirem:"*"
-php flarum migrate
+composer update afrux/asirem
 php flarum cache:clear
 ```
 
 ### Links
 
-- [Packagist](https://packagist.org/packages/sycho/flarum-asirem)
-- [GitHub](https://github.com/sycho/flarum-asirem)
+- [Packagist](https://packagist.org/packages/afrux/asirem)
+- [GitHub](https://github.com/afrux/asirem)
 - [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
