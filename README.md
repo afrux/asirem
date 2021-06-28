@@ -18,6 +18,12 @@ Install with composer:
 composer require afrux/asirem
 ```
 
+The following are nice to install with the theme as well:
+
+```sh
+composer require sycho/flarum-advanced-extension-categories
+```
+
 ### Updating
 
 ```sh
