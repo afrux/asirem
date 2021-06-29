@@ -6,6 +6,12 @@
   ],
   "type": "flarum-extension",
   "license": "MIT",
+  "funding": [
+    {
+      "type": "other",
+      "url": "https://www.buymeacoffee.com/sycho"
+    }
+  ],
   "require": {
     "flarum/core": "^1.0.0",
     "afrux/flarum-theme-base": "^0.1.0"
@@ -21,6 +27,11 @@
       "role": "Developer"
     }
   ],
+  "support": {
+    "issues": "https://github.com/afrux/asirem/issues",
+    "source": "https://github.com/afrux/asirem",
+    "forum": "https://discuss.flarum.org/d/27939"
+  },
   "autoload": {
     "psr-4": {
       "Afrux\\Asirem\\": "src/"
@@ -46,9 +57,6 @@
       "icon": {
         "image": "icon.svg"
       }
-    },
-    "flagrow": {
-      "discuss": ""
     }
   }
 }
