@@ -1,6 +1,6 @@
 afrux-asirem:
   admin:
     permissions:
-      edit_group: Edit
-      edit_group_permissions: Permissions
+      edit_group: => core.ref.edit
+      edit_group_permissions: => core.ref.edit
       filter_scopes: Filter Scopes
