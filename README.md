@@ -35,4 +35,4 @@ php flarum cache:clear
 
 - [Packagist](https://packagist.org/packages/afrux/asirem)
 - [GitHub](https://github.com/afrux/asirem)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [Discuss](https://discuss.flarum.org/d/27939-asirem-theme)
