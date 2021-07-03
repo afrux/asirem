@@ -27,7 +27,7 @@ composer require sycho/flarum-advanced-extension-categories
 ### Updating
 
 ```sh
-composer update afrux/asirem
+composer update afrux/asirem --with-dependencies
 php flarum cache:clear
 ```
 
