@@ -5,6 +5,10 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   gap: 8px;
+
+  @media @phone {
+    grid-template-columns: 100%;
+  }
 }
 
 .Asirem-TagTile {
@@ -85,5 +89,5 @@
 
 .Asirem-TagCloud {
   text-align: center;
-  margin-top: 16px;
+  margin: 16px 0;
 }
