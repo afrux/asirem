@@ -13,19 +13,27 @@
         margin: 2px 0;
 
         > a {
+          --icon-size: 30px;
           padding: 6px;
-          display: flex;
+          display: grid;
+          grid-template-columns: var(--icon-size) 1fr;
           align-items: center;
           border-radius: 25px;
           transition: background-color 0.4s, color 0.4s;
           font-size: 14px;
+          grid-gap: 10px;
 
           .Button-icon {
-            .asirem-icon-block(30px);
+            .asirem-icon-block(var(--icon-size));
             float: none;
-            margin: 0 10px 0 0;
+            margin: 0;
             border-radius: 100%;
             transition: background-color 0.4s;
+          }
+
+          .Button-label {
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
 
