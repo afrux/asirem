@@ -1,7 +1,4 @@
 import { extend, override } from 'flarum/extend';
-import icon from 'flarum/common/helpers/icon';
-import Dropdown from 'flarum/common/components/Dropdown';
-import Button from 'flarum/common/components/Button';
 import PermissionsPage from 'flarum/admin/components/PermissionsPage';
 import PermissionGrid from 'flarum/admin/components/PermissionGrid';
 
@@ -13,9 +10,7 @@ app.initializers.add(
     });
 
     override(PermissionGrid.prototype, 'view', function (original, vnode) {
-      return [
-        <div className="PermissionsPage-permissions-overflow">{original(vnode)}</div>,
-      ];
+      return [<div className="PermissionsPage-permissions-overflow">{original(vnode)}</div>];
     });
 
     extend(PermissionGrid.prototype, ['oncreate', 'onupdate'], function (vnode) {

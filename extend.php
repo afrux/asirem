@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of sycho/flarum-asirem.
+ * This file is part of afrux/asirem.
  *
  * Copyright (c) 2021 Sami Ilyes Mazouz.
  *
