@@ -9,7 +9,7 @@ import Footer from 'flarum/extensions/afrux-theme-base/forum/components/Footer';
 app.initializers.add('afrux-asirem', () => {
   extend(DiscussionListItem.prototype, 'view', function (vnode) {
     const discussionListItemContent = vnode.children.find(
-      (e) => e?.tag === 'div' && e.attrs && e.attrs.className.includes('DiscussionListItem-content')
+      (e) => e && e.tag === 'div' && e.attrs && e.attrs.className.includes('DiscussionListItem-content')
     );
 
     discussionListItemContent.children[0] = (
