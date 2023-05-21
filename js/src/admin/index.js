@@ -6,7 +6,9 @@ app.initializers.add(
   'afrux-asirem',
   (app) => {
     extend(PermissionsPage.prototype, 'content', function (vnode) {
-      vnode[0].children[1].attrs.className += ' Button--dashed';
+      if (vnode && vnode[0] && vnode[0].children && vnode[0].children[1]) {
+        vnode[0].children[1].attrs.className += ' Button--dashed';
+      }
     });
 
     override(PermissionGrid.prototype, 'view', function (original, vnode) {
