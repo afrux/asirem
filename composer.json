@@ -1,62 +1,79 @@
 {
-  "name": "afrux/asirem",
-  "description": "The weird Flarum theme made with potatoes as fuel, by Afrux.",
-  "keywords": [
-    "flarum"
-  ],
-  "type": "flarum-extension",
-  "license": "MIT",
-  "funding": [
-    {
-      "type": "other",
-      "url": "https://www.buymeacoffee.com/sycho"
-    }
-  ],
-  "require": {
-    "flarum/core": "^1.8.0",
-    "afrux/flarum-theme-base": "^0.1.0"
-  },
-  "require-dev": {
-    "sycho/flarum-uikit": "0.1.x-dev",
-    "afrux/flarum-theme-base": "0.1.x-dev"
-  },
-  "authors": [
-    {
-      "name": "Sami Mazouz",
-      "email": "ilyasmazouz@gmail.com",
-      "role": "Developer"
-    }
-  ],
-  "support": {
-    "issues": "https://github.com/afrux/asirem/issues",
-    "source": "https://github.com/afrux/asirem",
-    "forum": "https://discuss.flarum.org/d/27939"
-  },
-  "autoload": {
-    "psr-4": {
-      "Afrux\\Asirem\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Afrux\\Asirem\\Tests\\": "tests/"
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "0.1.x-dev"
+    "name": "afrux/asirem",
+    "description": "The weird Flarum theme made with potatoes as fuel, by Afrux.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://www.buymeacoffee.com/sycho"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.8.0",
+        "afrux/flarum-theme-base": "^0.1.0"
     },
-    "flarum-extension": {
-      "title": "Asirem",
-      "category": "theme",
-      "optional-dependencies": [
-          "flarum/tags",
-          "flarum/approval",
-          "sycho/flarum-advanced-extension-categories"
-        ],
-      "icon": {
-        "image": "icon.svg"
-      }
+    "require-dev": {
+        "sycho/flarum-uikit": "0.1.x-dev",
+        "afrux/flarum-theme-base": "0.1.x-dev"
+    },
+    "authors": [
+        {
+            "name": "Sami Mazouz",
+            "email": "ilyasmazouz@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/afrux/asirem/issues",
+        "source": "https://github.com/afrux/asirem",
+        "forum": "https://discuss.flarum.org/d/27939"
+    },
+    "autoload": {
+        "psr-4": {
+            "Afrux\\Asirem\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Afrux\\Asirem\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Asirem",
+            "category": "theme",
+            "optional-dependencies": [
+                "flarum/tags",
+                "flarum/approval",
+                "sycho/flarum-advanced-extension-categories"
+            ],
+            "icon": {
+                "image": "icon.svg"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "css": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
     }
-  }
 }
